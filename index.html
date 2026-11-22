@@ -19,32 +19,30 @@
 --muted:#718096;
 --shadow:0 12px 35px rgba(30,70,110,0.09);
 }
-*{
+* {
 margin:0;
 padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
 }
-body{
+body {
 font-family:'Poppins',sans-serif;
-background:var(--white);
+background:white;
 color:var(--text);
 overflow-x:hidden;
 }
-a{
-text-decoration:none;
-}
-img{
+a {text-decoration:none;}
+img,video {
 max-width:100%;
 display:block;
 }
-.container{
+.container {
 width:90%;
 max-width:1200px;
 margin:auto;
 }
 /* HEADER */
-header{
+header {
 position:fixed;
 top:0;
 left:0;
@@ -54,54 +52,52 @@ background:rgba(255,255,255,.94);
 backdrop-filter:blur(15px);
 box-shadow:0 2px 20px rgba(0,0,0,.04);
 }
-.navbar{
+.navbar {
 height:85px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
-.logo{
+.logo {
 display:flex;
 align-items:center;
 gap:12px;
 }
-.logo img{
+.logo img {
 width:52px;
 height:52px;
 border-radius:15px;
 object-fit:cover;
 }
-.logo h2{
+.logo h2 {
 color:var(--primary);
 font-size:1.5rem;
 font-weight:800;
 }
-.logo small{
+.logo small {
 color:var(--muted);
 font-size:.65rem;
 }
-nav{
+nav {
 display:flex;
 gap:30px;
 align-items:center;
 }
-nav a{
+nav a {
 color:var(--text);
 font-size:.88rem;
 font-weight:500;
 transition:.3s;
 }
-nav a:hover{
-color:var(--blue);
-}
-.menu-btn{
+nav a:hover {color:var(--blue);}
+.menu-btn {
 display:none;
 font-size:28px;
 cursor:pointer;
 color:var(--primary);
 }
 /* HERO */
-.hero{
+.hero {
 min-height:100vh;
 padding:140px 0 80px;
 background:linear-gradient(120deg,#f4f9ff,#ffffff,#edf7ff);
@@ -110,7 +106,7 @@ align-items:center;
 position:relative;
 overflow:hidden;
 }
-.hero::before{
+.hero::before {
 content:"";
 position:absolute;
 width:400px;
@@ -120,12 +116,13 @@ background:rgba(37,133,216,.07);
 top:-100px;
 right:-100px;
 }
-.hero-content{
+.hero-content {
 position:relative;
 z-index:2;
 max-width:850px;
+animation:appear 1.2s ease;
 }
-.badge{
+.badge {
 display:inline-block;
 padding:9px 18px;
 border-radius:50px;
@@ -135,78 +132,72 @@ font-size:.8rem;
 font-weight:600;
 margin-bottom:25px;
 }
-.hero h1{
+.hero h1 {
 font-size:clamp(2.6rem,6vw,4.7rem);
 line-height:1.2;
 font-weight:800;
 color:var(--primary);
 margin-bottom:25px;
 }
-.hero h1 span{
-color:var(--blue);
-}
-.hero p{
+.hero h1 span {color:var(--blue);}
+.hero p {
 max-width:750px;
 line-height:2;
 color:var(--muted);
 font-size:1rem;
 margin-bottom:30px;
 }
-.buttons{
+.buttons {
 display:flex;
 flex-wrap:wrap;
 gap:15px;
 }
-.btn{
+.btn {
 display:inline-block;
 padding:14px 28px;
 border-radius:50px;
 font-weight:600;
 transition:.35s;
 }
-.btn-primary{
+.btn-primary {
 background:var(--blue);
 color:white;
 }
-.btn-secondary{
+.btn-secondary {
 border:1px solid var(--blue);
 color:var(--blue);
 background:white;
 }
-.btn:hover{
+.btn:hover {
 transform:translateY(-5px);
 box-shadow:var(--shadow);
 }
-/* SECTIONS */
-section{
-padding:100px 0;
-}
-.section-heading{
+/* GENERAL SECTIONS */
+section {padding:100px 0;}
+.section-heading {
 text-align:center;
 margin-bottom:55px;
 }
-.section-heading h2{
+.section-heading h2 {
 font-size:clamp(2rem,4vw,3rem);
 color:var(--primary);
 font-weight:800;
 margin-bottom:12px;
 }
-.section-heading p{
+.section-heading p {
 color:var(--muted);
 max-width:650px;
 margin:auto;
 line-height:1.8;
 }
 /* ABOUT */
-.about{
-background:white;
-}
-.cards{
+.about {background:white;}
+.cards {
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
-.card{
+.card {
 background:white;
 border:1px solid #edf1f5;
 border-radius:22px;
@@ -214,36 +205,34 @@ padding:30px;
 box-shadow:var(--shadow);
 transition:.4s;
 }
-.card:hover{
+.card:hover {
 transform:translateY(-10px);
 box-shadow:0 20px 45px rgba(30,70,110,.14);
 }
-.card-image{
+.card-image {
 width:100%;
 height:230px;
 object-fit:cover;
 border-radius:16px;
 margin-bottom:22px;
 }
-.card h3{
+.card h3 {
 color:var(--primary);
 margin-bottom:15px;
 font-size:1.2rem;
 }
-.card p{
+.card p {
 color:var(--muted);
 line-height:1.9;
 font-size:.92rem;
 }
-.icon{
+.icon {
 font-size:35px;
 margin-bottom:18px;
 }
 /* JOURNEY */
-.journey{
-background:var(--light);
-}
-.story{
+.journey {background:var(--light);}
+.story {
 max-width:950px;
 margin:auto;
 background:white;
@@ -251,46 +240,142 @@ padding:45px;
 border-radius:25px;
 box-shadow:var(--shadow);
 }
-.story p{
+.story p {
 line-height:2;
 color:var(--muted);
 margin-bottom:20px;
 }
-.story img{
+.story img {
 width:100%;
 border-radius:20px;
 margin:30px 0;
 }
+/* FINAL EXAMINATIONS STORY */
+.final-story {
+background:linear-gradient(120deg,#edf7ff,#ffffff,#f0faf6);
+}
+.final-card {
+max-width:900px;
+margin:auto;
+padding:45px;
+background:white;
+border-radius:28px;
+box-shadow:var(--shadow);
+border:1px solid #eaf1f8;
+position:relative;
+overflow:hidden;
+}
+.final-card::before {
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:6px;
+height:100%;
+background:linear-gradient(var(--blue),var(--green));
+}
+.final-label {
+display:inline-block;
+background:#e2f1ff;
+color:var(--blue);
+padding:8px 16px;
+border-radius:50px;
+font-size:.78rem;
+font-weight:700;
+margin-bottom:22px;
+}
+.final-card h2 {
+font-size:clamp(1.7rem,4vw,2.6rem);
+color:var(--primary);
+margin-bottom:22px;
+}
+.final-card p {
+color:var(--muted);
+line-height:2;
+margin-bottom:18px;
+}
+.expiry {
+margin-top:25px;
+padding-top:20px;
+border-top:1px solid #edf1f5;
+font-size:.78rem;
+color:var(--muted);
+}
 /* SKILLS */
-.skills{
-background:white;
+.skills {background:white;}
+/* MEDIA AND GALLERY */
+.media {background:var(--light);}
+.gallery {
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
 }
-/* MEDIA */
-.media{
-background:var(--light);
-}
-.video-placeholder{
+.gallery-item {
 background:white;
-border-radius:22px;
-padding:40px 25px;
+border-radius:24px;
+overflow:hidden;
+box-shadow:var(--shadow);
+transition:.4s;
+}
+.gallery-item:hover {
+transform:translateY(-8px);
+}
+.gallery-item img,
+.gallery-item video {
+width:100%;
+height:390px;
+object-fit:cover;
+background:#edf1f5;
+}
+.gallery-caption {
+padding:25px;
+}
+.gallery-caption h3 {
+color:var(--primary);
+font-size:1.15rem;
+margin-bottom:10px;
+}
+.gallery-caption p {
+color:var(--muted);
+font-size:.9rem;
+line-height:1.8;
+}
+.tiktok-box {
 text-align:center;
-border:1px solid #e8eef5;
+margin-top:45px;
+padding:35px;
+background:white;
+border-radius:24px;
 box-shadow:var(--shadow);
 }
-.video-placeholder h3{
+.tiktok-box h3 {
 color:var(--primary);
 margin-bottom:12px;
 }
-.video-placeholder p{
+.tiktok-box p {
 color:var(--muted);
+margin-bottom:22px;
 line-height:1.8;
 }
+.tiktok-btn {
+display:inline-block;
+padding:14px 28px;
+border-radius:50px;
+background:#101010;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+.tiktok-btn:hover {
+transform:translateY(-5px);
+box-shadow:var(--shadow);
+}
 /* VISION */
-.vision{
+.vision {
 background:linear-gradient(120deg,#edf7ff,#ffffff);
 text-align:center;
 }
-.quote{
+.quote {
 max-width:850px;
 margin:auto;
 font-size:clamp(1.5rem,4vw,2.5rem);
@@ -298,14 +383,10 @@ font-weight:700;
 line-height:1.7;
 color:var(--primary);
 }
-.quote span{
-color:var(--blue);
-}
+.quote span {color:var(--blue);}
 /* CONTACT */
-.contact{
-background:white;
-}
-.contact-box{
+.contact {background:white;}
+.contact-box {
 max-width:750px;
 margin:auto;
 padding:40px;
@@ -314,7 +395,7 @@ background:var(--light);
 box-shadow:var(--shadow);
 }
 form input,
-form textarea{
+form textarea {
 width:100%;
 padding:16px;
 margin:12px 0;
@@ -327,36 +408,42 @@ outline:none;
 transition:.3s;
 }
 form input:focus,
-form textarea:focus{
+form textarea:focus {
 border-color:var(--blue);
 box-shadow:0 0 0 3px rgba(37,133,216,.1);
 }
-form textarea{
-resize:vertical;
-}
-form button{
+form textarea {resize:vertical;}
+form button {
 border:none;
 cursor:pointer;
 font-family:inherit;
 }
-.form-message{
+.form-message {
 margin-top:15px;
 color:var(--green);
 }
 /* FOOTER */
-footer{
+footer {
 background:var(--primary);
 color:white;
 padding:40px 0;
 text-align:center;
 }
-footer p{
+footer p {
 font-size:.85rem;
 line-height:2;
 opacity:.85;
 }
+.footer-social {
+margin-top:15px;
+}
+.footer-social a {
+color:white;
+margin:0 10px;
+font-size:.9rem;
+}
 /* WHATSAPP */
-.whatsapp{
+.whatsapp {
 position:fixed;
 right:22px;
 bottom:22px;
@@ -369,38 +456,31 @@ z-index:900;
 box-shadow:var(--shadow);
 transition:.3s;
 }
-.whatsapp:hover{
-transform:scale(1.08);
-}
+.whatsapp:hover {transform:scale(1.08);}
 /* ANIMATIONS */
-.reveal{
+.reveal {
 opacity:0;
 transform:translateY(35px);
 transition:opacity .8s ease,transform .8s ease;
 }
-.reveal.show{
+.reveal.show {
 opacity:1;
 transform:translateY(0);
 }
-.hero-content{
-animation:appear 1.2s ease;
-}
-@keyframes appear{
-from{
+@keyframes appear {
+from {
 opacity:0;
 transform:translateY(35px);
 }
-to{
+to {
 opacity:1;
 transform:translateY(0);
 }
 }
 /* MOBILE */
-@media(max-width:850px){
-.menu-btn{
-display:block;
-}
-nav{
+@media(max-width:850px) {
+.menu-btn {display:block;}
+nav {
 position:absolute;
 top:85px;
 left:0;
@@ -413,29 +493,23 @@ padding:25px 7%;
 gap:22px;
 box-shadow:var(--shadow);
 }
-nav.active{
-display:flex;
+nav.active {display:flex;}
+.hero {min-height:90vh;}
+.hero h1 {font-size:2.6rem;}
+.story,
+.final-card {padding:25px;}
+.contact-box {padding:25px;}
+.gallery {grid-template-columns:1fr;}
+.gallery-item img,
+.gallery-item video {height:320px;}
 }
-.hero{
-min-height:90vh;
-}
-.hero h1{
-font-size:2.6rem;
-}
-.story{
-padding:25px;
-}
-.contact-box{
-padding:25px;
-}
-}
-@media(prefers-reduced-motion:reduce){
-*{
+@media(prefers-reduced-motion:reduce) {
+* {
 scroll-behavior:auto!important;
 animation:none!important;
 transition:none!important;
 }
-.reveal{
+.reveal {
 opacity:1;
 transform:none;
 }
@@ -457,6 +531,7 @@ transform:none;
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#journey">My Journey</a>
+<a href="#finals">Final Chapter</a>
 <a href="#skills">Interests</a>
 <a href="#media">Media</a>
 <a href="#contact">Contact</a>
@@ -474,8 +549,11 @@ From Humble Beginnings To
 </h1>
 <p>
 I'm Emmanuel Mugenyi. A young mind driven by curiosity, ambition and the desire to become better every day.
-This is more than a website. It's a record of my journey, the lessons I'm learning, the ideas I'm exploring and the future I'm working towards.
+
+This is more than a website. It’s a record of my journey, the lessons I’m learning, the ideas I’m exploring and the future I’m working towards.
+
 Still learning. Still growing. Still becoming.
+
 </p>
 <div class="buttons">
 <a href="#journey" class="btn btn-primary">Explore My Journey →</a>
@@ -524,9 +602,7 @@ Through technology, online learning and personal exploration, I continue discove
 <p>Every successful journey begins somewhere.</p>
 </div>
 <div class="story reveal">
-<p>
-I didn't start with a perfect plan. I started with curiosity.
-</p>
+<p>I didn't start with a perfect plan. I started with curiosity.</p>
 <p>
 My journey into technology, personal development and Forex trading has been a continuous learning experience.
 </p>
@@ -540,9 +616,36 @@ I have learned that meaningful progress takes patience. Whether it's understandi
 <p>
 I'm not presenting myself as someone who has already made it. I'm documenting the process of becoming someone who can.
 </p>
+<p>One step. One lesson. One opportunity at a time.</p>
+</div>
+</div>
+</section>
+<!-- TEMPORARY FINAL EXAMINATIONS STORY -->
+<section class="final-story" id="finals">
+<div class="container">
+<div class="section-heading reveal">
+<h2>A Chapter Nearing Its End</h2>
+<p>Some milestones deserve to be documented.</p>
+</div>
+<div class="final-card reveal" id="final-exam-story">
+<div class="final-label">🎓 CURRENT CHAPTER · A-LEVEL</div>
+<h2>Closing One Chapter. Preparing for Another.</h2>
 <p>
-One step. One lesson. One opportunity at a time.
+I'm currently sitting my final A-Level examinations, bringing an important chapter of my academic journey closer to its conclusion.
 </p>
+<p>
+From the lessons learned to the experiences that shaped me, this journey has been more than just academics. It has been about growth, resilience, discovery and becoming.
+</p>
+<p>
+As I prepare to close this chapter, I'm also preparing for everything life has ahead. New responsibilities, bigger ambitions, unfamiliar experiences and opportunities to build the future I've always envisioned.
+</p>
+<p>
+One chapter is ending. A whole new journey awaits.
+</p>
+<div class="expiry">
+<span>⏳ This story is temporary.</span>
+<span id="story-countdown"></span>
+</div>
 </div>
 </div>
 </section>
@@ -572,20 +675,45 @@ One step. One lesson. One opportunity at a time.
 </div>
 </div>
 </section>
-<!-- MEDIA -->
+<!-- PERSONAL MEDIA GALLERY -->
 <section class="media" id="media">
 <div class="container">
 <div class="section-heading reveal">
-<h2>Videos & Media</h2>
-<p>Ideas, lessons and experiences worth sharing.</p>
+<h2>Moments Along The Journey</h2>
+<p>A little glimpse into life, growth and the process of figuring things out.</p>
 </div>
-<div class="video-placeholder reveal">
-<div class="icon">🎬</div>
-<h3>BetterMe Media</h3>
+<div class="gallery">
+<div class="gallery-item reveal">
+<div class="gallery-caption">
+<h3>Somewhere Between Growing...</h3>
 <p>
-Video lessons, personal experiences and educational content will be featured here.
-New content coming soon.
+Somewhere between growing and figuring life out.
 </p>
+</div>
+</div>
+<div class="gallery-item reveal">
+<video controls playsinline preload="metadata" poster="4e3bf61d-dce0-492d-8153-637a2e00f8c6.jpeg">
+<source src="736398d1d2e544da98677b2aa6c3f9c7.mov" type="video/quicktime">
+Your browser does not support this video.
+</video>
+<div class="gallery-caption">
+<h3>Life In Motion</h3>
+<p>
+Every moment, every experience and every step contributes to the journey.
+</p>
+</div>
+</div>
+</div>
+<!-- TIKTOK -->
+<div class="tiktok-box reveal">
+<div class="icon">♪</div>
+<h3>Follow My Journey Beyond This Website</h3>
+<p>
+More moments, experiences and everyday expressions of life.
+Find me on TikTok.
+</p>
+
+Visit My TikTok ↗
 </div>
 </div>
 </section>
@@ -615,7 +743,9 @@ Together We Build A Better Us."
 <input type="email" name="email" placeholder="Your Email Address" required>
 <input type="tel" name="phone" placeholder="07XXXXXXXX" pattern="07[0-9]{8}" required>
 <textarea name="message" rows="6" placeholder="Write Your Message..." required></textarea>
-<button type="submit" class="btn btn-primary">Send Message 🚀</button>
+
+Send Message 🚀
+
 <p class="form-message" id="form-message"></p>
 </form>
 </div>
@@ -624,12 +754,12 @@ Together We Build A Better Us."
 <!-- FOOTER -->
 <footer>
 <div class="container">
-<p>
-© 2026 BetterMe | Emmanuel Mugenyi
-</p>
-<p>
-Focus Better 4 Better Success.
-</p>
+<p>© 2026 BetterMe | Emmanuel Mugenyi</p>
+<p>Focus Better 4 Better Success.</p>
+<div class="footer-social">
+<a href="https://www.tiktok.com/@beta_me01" target="_blank" rel="noopener">TikTok</a>
+<a href="#home">Back to Top ↑</a>
+</div>
 </div>
 </footer>
 <a href="https://wa.me/256789193351" class="whatsapp" target="_blank" rel="noopener">
@@ -657,6 +787,24 @@ observer.unobserve(entry.target);
 document.querySelectorAll(".reveal").forEach(element=>{
 observer.observe(element);
 });
+/* TEMPORARY STORY EXPIRY */
+/* Change this date whenever you want the story to expire. */
+const storyExpiry = new Date("2026-12-31T23:59:59+03:00").getTime();
+function updateStory(){
+const now = Date.now();
+const story = document.getElementById("final-exam-story");
+const countdown = document.getElementById("story-countdown");
+if(now >= storyExpiry){
+story.style.display = "none";
+return;
+}
+const distance = storyExpiry - now;
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+countdown.textContent = days + " days remaining";
+}
+updateStory();
+setInterval(updateStory,60000);
 /* CONTACT FORM */
 const form=document.getElementById("contact-form");
 form.addEventListener("submit",async function(e){
